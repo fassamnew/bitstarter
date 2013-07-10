@@ -5,7 +5,7 @@ var text=JSON.stringify(buf);
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(buf);
+  response.send(text);
 });
 
 var port = process.env.PORT || 5000;
