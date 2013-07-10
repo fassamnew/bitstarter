@@ -1,7 +1,7 @@
 var express = require('express');
 var fs=require('fs');
 var buf=new Buffer(fs.readFileSync('index.html'));
-var text=JSON.stringify(buf);
+var text=buf.toString();
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
